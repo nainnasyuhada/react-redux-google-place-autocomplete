@@ -1,0 +1,221 @@
+{
+    "predictions": [
+        {
+            "description": "Kuala Lumpur, Malaysia",
+            "matched_substrings": [
+                {
+                    "length": 12,
+                    "offset": 0
+                }
+            ],
+            "place_id": "ChIJ0-cIvSo2zDERmWzYQPUfLiM",
+            "reference": "ChIJ0-cIvSo2zDERmWzYQPUfLiM",
+            "structured_formatting": {
+                "main_text": "Kuala Lumpur",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 12,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Malaysia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "Kuala Lumpur"
+                },
+                {
+                    "offset": 14,
+                    "value": "Malaysia"
+                }
+            ],
+            "types": [
+                "administrative_area_level_1",
+                "political",
+                "geocode"
+            ]
+        },
+        {
+            "description": "Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+            "matched_substrings": [
+                {
+                    "length": 12,
+                    "offset": 0
+                }
+            ],
+            "place_id": "ChIJ5-rvAcdJzDERfSgcL1uO2fQ",
+            "reference": "ChIJ5-rvAcdJzDERfSgcL1uO2fQ",
+            "structured_formatting": {
+                "main_text": "Kuala Lumpur",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 12,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Federal Territory of Kuala Lumpur, Malaysia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "Kuala Lumpur"
+                },
+                {
+                    "offset": 14,
+                    "value": "Federal Territory of Kuala Lumpur"
+                },
+                {
+                    "offset": 49,
+                    "value": "Malaysia"
+                }
+            ],
+            "types": [
+                "locality",
+                "political",
+                "geocode"
+            ]
+        },
+        {
+            "description": "Kuala Lumpur City Centre, Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+            "matched_substrings": [
+                {
+                    "length": 12,
+                    "offset": 0
+                }
+            ],
+            "place_id": "ChIJ14gJ49NJzDERmsAj2n9LSkY",
+            "reference": "ChIJ14gJ49NJzDERmsAj2n9LSkY",
+            "structured_formatting": {
+                "main_text": "Kuala Lumpur City Centre",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 12,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "Kuala Lumpur City Centre"
+                },
+                {
+                    "offset": 26,
+                    "value": "Kuala Lumpur"
+                },
+                {
+                    "offset": 40,
+                    "value": "Federal Territory of Kuala Lumpur"
+                },
+                {
+                    "offset": 75,
+                    "value": "Malaysia"
+                }
+            ],
+            "types": [
+                "sublocality_level_1",
+                "sublocality",
+                "political",
+                "geocode"
+            ]
+        },
+        {
+            "description": "Kuala Lumpur International Airport KLIA (KUL), Kuala Lumpur International Airport, Sepang, Selangor, Malaysia",
+            "matched_substrings": [
+                {
+                    "length": 12,
+                    "offset": 0
+                }
+            ],
+            "place_id": "ChIJERKi1IC_zTERC_q1Z7t4J5g",
+            "reference": "ChIJERKi1IC_zTERC_q1Z7t4J5g",
+            "structured_formatting": {
+                "main_text": "Kuala Lumpur International Airport KLIA (KUL)",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 12,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Kuala Lumpur International Airport, Sepang, Selangor, Malaysia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "Kuala Lumpur International Airport KLIA (KUL)"
+                },
+                {
+                    "offset": 47,
+                    "value": "Kuala Lumpur International Airport"
+                },
+                {
+                    "offset": 83,
+                    "value": "Sepang"
+                },
+                {
+                    "offset": 91,
+                    "value": "Selangor"
+                },
+                {
+                    "offset": 101,
+                    "value": "Malaysia"
+                }
+            ],
+            "types": [
+                "airport",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "description": "Kuala Lumpur Convention Centre, Jalan Pinang, Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+            "matched_substrings": [
+                {
+                    "length": 12,
+                    "offset": 0
+                }
+            ],
+            "place_id": "ChIJ__zTe9M3zDERtzz3V5s1Bnc",
+            "reference": "ChIJ__zTe9M3zDERtzz3V5s1Bnc",
+            "structured_formatting": {
+                "main_text": "Kuala Lumpur Convention Centre",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 12,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Jalan Pinang, Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "Kuala Lumpur Convention Centre"
+                },
+                {
+                    "offset": 32,
+                    "value": "Jalan Pinang"
+                },
+                {
+                    "offset": 46,
+                    "value": "Kuala Lumpur"
+                },
+                {
+                    "offset": 60,
+                    "value": "Federal Territory of Kuala Lumpur"
+                },
+                {
+                    "offset": 95,
+                    "value": "Malaysia"
+                }
+            ],
+            "types": [
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}

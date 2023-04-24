@@ -1,10 +1,18 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+This project used environment variables management in accessing Google API Places. 
+
+Install react-dotenv:
+
+### `npm install react-dotenv`
+
+Create .env file to store Google API Credentials and URL:
+
+### `REACT_APP_GOOGLE_API_URL = [YOUR GOOGLE API PLACE URL]` 
+### `REACT_APP_GOOGLE_API_KEY = [YOUR GOOGLE API PLACE KEY]` 
+
+Then, run the project:
 
 ### `npm start`
 
