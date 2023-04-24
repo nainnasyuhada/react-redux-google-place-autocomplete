@@ -9,11 +9,11 @@ const ContainerHeight = 400;
 const ListResult = (props) => {
   const [places, setPlaces] = useState([]);
 
-
   useEffect(() => {
-    setPlaces(props.data.data.predictions);
+    setPlaces(props.data.predictions);
   }, []);
 
+  console.log(places)
 
   const appendData = () => {};
 

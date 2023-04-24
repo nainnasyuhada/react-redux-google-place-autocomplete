@@ -1,73 +1,106 @@
 import "../App.css";
-import { Input } from "antd";
+import { Input, AutoComplete } from "antd";
 import { useState, useEffect } from "react";
 import { getPlaces } from "../redux/actions/places";
 import Header from "./Header";
+import Map from "./Map";
 import { useDispatch, useSelector } from "react-redux";
 import ListResult from "./ListResult";
-import data from '../assets/data.json'
+import data from "../assets/places.json";
 import Error from "./Error";
 import { CloseCircleFilled } from "@ant-design/icons";
 
-
 const { Search } = Input;
+const { Option } = AutoComplete;
 
 const SearchBar = () => {
-  const [keyword, setKeyword] = useState('');
-  const [result, setResult] = useState({});
-  const [status, setStatus] = useState('');
+  const [keyword, setKeyword] = useState("");
+  const [status, setStatus] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [options, setOptions] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState('');
 
   const dispatch = useDispatch();
-  const places = useSelector(state => state.places.places);
-  const loading = useSelector(state => state.places.loading);
-  const error = useSelector(state => state.places.error);
+  const places = useSelector((state) => state.places.places);
 
-  console.log(showResult, keyword)
 
-useEffect(()=>{
-  /** Data testing from local file using actual result */ 
-  // setResult({ data});
-  // setStatus(data.status);
-}, [])
+  const list = [
+    {label: 'One', value: '1'}, 
+    {label: 'Two', value: '2'},
+    {label: 'Three', value: '3'}, 
+    {label: 'Four', value: '4'},
+    {label: 'Five', value: '5'}
+  ]
 
-const searchLocation = (e) => {
-  setKeyword(e);
+  useEffect(() => {
+    /** Data testing from local file using actual result */
+    // setResult({ data});
+    // setStatus(data.status);
+  }, []);
 
-  // call getPlaces action for API fetching
-  dispatch(getPlaces(keyword));
+  const searchLocation = (e) => {
+    setKeyword(e);
 
-  // set value in state from reducer store
-  setStatus(places.status);
-  setResult({ places});
-  setShowResult(true);
+    // call getPlaces action for API fetching
+    dispatch(getPlaces(keyword));
 
-}
+    // set value in state from reducer store
+    setStatus(places.status);
 
-const onFieldClear = () => {
-  setShowResult(false);
-  setKeyword(null);
-};
+    // assign result to option list with key and value
+    const optionValues = places.predictions.map((description) => (
+      <Option key={description.description} value={description.description}>
+        {description}
+      </Option>
+    ));
+
+    setOptions(optionValues);
+    setShowResult(true);
+  };
+
+  const selectLocation = (value) => {
+    // to find geocode
+    setSelectedLocation(value);
+
+  }
  
+  const onFieldClear = () => {
+    setShowResult(false);
+    setKeyword(null);
+  };
 
   return (
     <div className="App">
       <Header />
-      <Search
-        allowClear={{ clearIcon: <CloseCircleFilled onClick={ onFieldClear } /> }}
+      {/* <Search
+        allowClear={{ clearIcon: <CloseCircleFilled onClick={onFieldClear} /> }}
         className="SearchBar"
         enterButton
         onChange={(event) => searchLocation(event.target.value)}
         placeholder="Enter a location"
+      /> */}
+
+      <AutoComplete
+      allowClear={{ clearIcon: <CloseCircleFilled onClick={onFieldClear} /> }}
+        options={options}
+        className="SearchBar"
+        filterOption={true}
+        placeholder="Enter a location"
+        // onChange={searchLocation}
+        onSearch={searchLocation}
+        onSelect={selectLocation}
+        
       />
 
-      { !showResult ? null :
-     status === 'OK' ? <ListResult data={result} /> : <Error/>
-   }
+      {!showResult ? null : status === "OK" ? (
+        // <ListResult data={places} />
+        <Map data={selectedLocation} />
+      ) : (
+        <Error />
+      )}
+
     </div>
   );
-}
-
-
+};
 
 export default SearchBar;

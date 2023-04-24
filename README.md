@@ -1,4 +1,6 @@
 
+This project is build using React app with Redux-Saga implementation and Google Place Autocomplete service.
+
 ## Available Scripts
 
 This project used environment variables management in accessing Google API Places. 
@@ -9,11 +11,14 @@ Install react-dotenv:
 
 Create .env file to store Google API Credentials and URL:
 
-### `REACT_APP_GOOGLE_API_URL = [YOUR GOOGLE API PLACE URL]` 
-### `REACT_APP_GOOGLE_API_KEY = [YOUR GOOGLE API PLACE KEY]` 
+### `REACT_APP_GOOGLE_API_AUTOCOMPLETE = https://maps.googleapis.com/maps/api/place/autocomplete/json` 
+### `REACT_APP_GOOGLE_API_GEOCODE = https://maps.googleapis.com/maps/api/geocode/json`
+### `REACT_APP_GOOGLE_API_KEY = [YOUR GOOGLE API KEY]` 
 
-Then, run the project:
+Then, install related libraries:
+### `npm i`
 
+Run the project:
 ### `npm start`
 
 Runs the app in the development mode.\

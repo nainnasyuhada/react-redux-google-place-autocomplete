@@ -1,7 +1,7 @@
 import { put, takeEvery } from 'redux-saga/effects'
 import {GET_PLACES_REQUESTED } from '../types';
 
-const baseURL = process.env.REACT_APP_GOOGLE_API_URL;
+const baseURL = process.env.REACT_APP_GOOGLE_API_AUTOCOMPLETE;
 
 function* fetchPlaces(data) {
    try {

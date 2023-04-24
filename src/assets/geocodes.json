@@ -1,0 +1,87 @@
+{
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "Kuala Lumpur International Airport (KUL)",
+                    "short_name": "Kuala Lumpur International Airport (KUL)",
+                    "types": [
+                        "airport",
+                        "establishment",
+                        "point_of_interest"
+                    ]
+                },
+                {
+                    "long_name": "Kuala Lumpur International Airport",
+                    "short_name": "Kuala Lumpur International Airport",
+                    "types": [
+                        "political",
+                        "sublocality",
+                        "sublocality_level_1"
+                    ]
+                },
+                {
+                    "long_name": "Sepang",
+                    "short_name": "Sepang",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Selangor",
+                    "short_name": "Selangor",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Malaysia",
+                    "short_name": "MY",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "64000",
+                    "short_name": "64000",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Kuala Lumpur International Airport (KUL) (KUL), Kuala Lumpur International Airport, 64000 Sepang, Selangor, Malaysia",
+            "geometry": {
+                "location": {
+                    "lat": 2.7433438,
+                    "lng": 101.6978769
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": 2.745644130291502,
+                        "lng": 101.7007364
+                    },
+                    "southwest": {
+                        "lat": 2.742946169708498,
+                        "lng": 101.6978769
+                    }
+                }
+            },
+            "partial_match": true,
+            "place_id": "ChIJERKi1IC_zTERC_q1Z7t4J5g",
+            "plus_code": {
+                "compound_code": "PMVX+85 Sepang, Selangor, Malaysia",
+                "global_code": "6PJ3PMVX+85"
+            },
+            "types": [
+                "airport",
+                "establishment",
+                "point_of_interest"
+            ]
+        }
+    ],
+    "status": "OK"
+}
