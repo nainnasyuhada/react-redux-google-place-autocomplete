@@ -17,20 +17,12 @@ const SearchBar = () => {
   const [keyword, setKeyword] = useState("");
   const [status, setStatus] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [showMap, setShowMap] = useState(false);
   const [options, setOptions] = useState([]);
-  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState("");
 
   const dispatch = useDispatch();
   const places = useSelector((state) => state.places.places);
-
-
-  const list = [
-    {label: 'One', value: '1'}, 
-    {label: 'Two', value: '2'},
-    {label: 'Three', value: '3'}, 
-    {label: 'Four', value: '4'},
-    {label: 'Five', value: '5'}
-  ]
 
   useEffect(() => {
     /** Data testing from local file using actual result */
@@ -47,7 +39,7 @@ const SearchBar = () => {
     // set value in state from reducer store
     setStatus(places.status);
 
-    // assign result to option list with key and value
+    // assign result to autocomplete option list with key and value
     const optionValues = places.predictions.map((description) => (
       <Option key={description.description} value={description.description}>
         {description}
@@ -61,9 +53,9 @@ const SearchBar = () => {
   const selectLocation = (value) => {
     // to find geocode
     setSelectedLocation(value);
+    setShowMap(true);
+  };
 
-  }
- 
   const onFieldClear = () => {
     setShowResult(false);
     setKeyword(null);
@@ -72,16 +64,25 @@ const SearchBar = () => {
   return (
     <div className="App">
       <Header />
-      {/* <Search
+
+      {/* Using Input & List Component fron AntDesign */}
+       {/* <Search
         allowClear={{ clearIcon: <CloseCircleFilled onClick={onFieldClear} /> }}
         className="SearchBar"
         enterButton
         onChange={(event) => searchLocation(event.target.value)}
         placeholder="Enter a location"
-      /> */}
+      /> 
 
+      {!showResult ? null : status === "OK" ? (
+        <ListResult data={places} />
+      ) : (
+        <Error />
+      )}  */}
+
+      {/* Using Autocomplete Component from AntDesign */}
       <AutoComplete
-      allowClear={{ clearIcon: <CloseCircleFilled onClick={onFieldClear} /> }}
+        allowClear={{ clearIcon: <CloseCircleFilled onClick={onFieldClear} /> }}
         options={options}
         className="SearchBar"
         filterOption={true}
@@ -89,16 +90,9 @@ const SearchBar = () => {
         // onChange={searchLocation}
         onSearch={searchLocation}
         onSelect={selectLocation}
-        
       />
 
-      {!showResult ? null : status === "OK" ? (
-        // <ListResult data={places} />
-        <Map data={selectedLocation} />
-      ) : (
-        <Error />
-      )}
-
+      {!showMap ? null : <Map data={selectedLocation} />}
     </div>
   );
 };

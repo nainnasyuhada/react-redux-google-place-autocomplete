@@ -5,10 +5,8 @@ const baseURL = process.env.REACT_APP_GOOGLE_API_GEOCODE;
 
 function* fetchGeocode(data) {
    try {
-      let places = yield fetch(baseURL + '?key=' + process.env.REACT_APP_GOOGLE_API_KEY + '&address=' + data.place);
-      console.log(places)
-      
-      yield put({type: 'GET_GEOCODE_SUCCESS', places: places});
+      let geocodes = yield fetch(baseURL + '?key=' + process.env.REACT_APP_GOOGLE_API_KEY + '&address=' + data.place);
+      yield put({type: 'GET_GEOCODE_SUCCESS', geocodes: geocodes});
    } catch (e) {
       yield put({type: 'GET_GEOCODE_FAILED', message: e.message});
    }
